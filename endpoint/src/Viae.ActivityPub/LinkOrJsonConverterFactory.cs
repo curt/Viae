@@ -55,13 +55,12 @@ public class LinkOrJsonConverter<T> : JsonConverter<LinkOr<T>>
         }
 
         // Otherwise, deserialize as T
-        if (
-            reader.TokenType is JsonTokenType.StartObject
-            or JsonTokenType.StartArray
-        )
+        if (reader.TokenType is JsonTokenType.StartObject or JsonTokenType.StartArray)
         {
             var value = JsonSerializer.Deserialize<T>(ref reader, options);
-            return value == null ? throw new JsonException($"Failed to deserialize object as {typeof(T).Name}.") : new LinkOr<T>(value);
+            return value == null
+                ? throw new JsonException($"Failed to deserialize object as {typeof(T).Name}.")
+                : new LinkOr<T>(value);
         }
 
         throw new JsonException(
