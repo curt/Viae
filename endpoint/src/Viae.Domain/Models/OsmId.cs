@@ -30,7 +30,7 @@ public readonly struct OsmId(OsmType type, ulong id) : IEquatable<OsmId>, ICompa
     /// <param name="input">The string representation to parse.</param>
     /// <param name="result">When the method returns, contains the parsed identifier or the default value on failure.</param>
     /// <returns><c>true</c> when parsing succeeds; otherwise, <c>false</c>.</returns>
-    public static bool TryParse(string input, out OsmId result)
+    public static bool TryParse(string? input, out OsmId result)
     {
         result = default;
 
