@@ -1,0 +1,8 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "type": "Follow",
+  "id": "https://pixelfed.social/users/charlie/follows/001",
+  "actor": "https://pixelfed.social/users/charlie",
+  "object": "https://mastodon.social/@alice",
+  "published": "2025-10-22T12:00:00Z"
+}

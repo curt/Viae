@@ -1,0 +1,18 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "type": "Create",
+  "id": "https://mastodon.social/users/alice/statuses/12345/activity",
+  "actor": "https://mastodon.social/@alice",
+  "published": "2025-10-22T10:00:00Z",
+  "to": ["https://www.w3.org/ns/activitystreams#Public"],
+  "cc": ["https://mastodon.social/users/alice/followers"],
+  "object": {
+    "type": "Note",
+    "id": "https://mastodon.social/users/alice/statuses/12345",
+    "attributedTo": "https://mastodon.social/@alice",
+    "content": "<p>Hello, federated world! This is my first post.</p>",
+    "published": "2025-10-22T10:00:00Z",
+    "to": ["https://www.w3.org/ns/activitystreams#Public"],
+    "cc": ["https://mastodon.social/users/alice/followers"]
+  }
+}

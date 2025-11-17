@@ -94,6 +94,10 @@ This is the beginning of a journey to create something unique: a platform where 
 
 Viae isn't just about building software - it's about finally realizing a two-decade vision of showing how everything connects.
 
+## License
+
+AGPL-3.0 - Copyright © 2025 Curt Gilman
+
 ---
 
 *More documentation and code will be published as development progresses.*

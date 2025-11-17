@@ -1,0 +1,9 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "type": "Pong",
+  "id": "https://social.example/pong/def456",
+  "actor": "https://social.example/users/bob",
+  "to": "https://example.com/users/alice",
+  "object": "https://example.com/ping/abc123",
+  "published": "2025-10-22T14:25:15Z"
+}

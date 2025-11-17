@@ -1,0 +1,14 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "type": "CollectionPage",
+  "id": "https://mastodon.social/users/alice/followers?page=2",
+  "partOf": "https://mastodon.social/users/alice/followers",
+  "next": "https://mastodon.social/users/alice/followers?page=3",
+  "prev": "https://mastodon.social/users/alice/followers?page=1",
+  "totalItems": 250,
+  "items": [
+    "https://mastodon.social/users/bob",
+    "https://mastodon.social/users/charlie",
+    "https://mastodon.social/users/dave"
+  ]
+}

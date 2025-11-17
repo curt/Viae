@@ -1,0 +1,13 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "type": "Ping",
+  "id": "https://example.com/ping/custom123",
+  "actor": "https://example.com/users/eve",
+  "to": "https://social.example/users/frank",
+  "customProperty": "custom value",
+  "extension": {
+    "foo": "bar",
+    "baz": 42
+  },
+  "someArray": [1, 2, 3]
+}

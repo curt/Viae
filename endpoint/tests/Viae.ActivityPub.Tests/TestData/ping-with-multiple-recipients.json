@@ -1,0 +1,12 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "type": "Ping",
+  "id": "https://example.com/ping/xyz789",
+  "actor": "https://example.com/users/charlie",
+  "to": [
+    "https://social.example/users/alice",
+    "https://social.example/users/bob",
+    "https://mastodon.social/users/dave"
+  ],
+  "published": "2025-10-22T14:30:00Z"
+}

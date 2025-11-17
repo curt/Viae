@@ -1,0 +1,9 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "type": "Create",
+  "id": "https://example.com/activities/xyz",
+  "actor": "https://example.com/users/bob",
+  "published": "2025-10-22T11:30:00Z",
+  "to": ["https://www.w3.org/ns/activitystreams#Public"],
+  "object": "https://example.com/notes/789"
+}
