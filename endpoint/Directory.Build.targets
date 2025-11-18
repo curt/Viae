@@ -3,13 +3,18 @@
         <PackageReference Update="FluentAssertions" Version="7.1.0" />
         <PackageReference Update="FluentValidation" Version="12.0.0" />
         <PackageReference Update="Microsoft.EntityFrameworkCore" Version="9.0.10" />
+        <PackageReference Update="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.10" />
         <PackageReference Update="Microsoft.EntityFrameworkCore.Relational" Version="9.0.10" />
         <PackageReference Update="Microsoft.EntityFrameworkCore.Design" Version="9.0.10" />
+        <PackageReference Update="Microsoft.Extensions.Http" Version="9.0.10" />
+        <PackageReference Update="Microsoft.Extensions.Logging.Abstractions" Version="9.0.10" />
         <PackageReference
             Update="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite"
             Version="9.0.4"
         />
+        <PackageReference Update="Moq" Version="4.20.72" />
         <PackageReference Update="MSTest" Version="4.0.1" />
+        <PackageReference Update="StackExchange.Redis" Version="2.9.32" />
         <PackageReference Include="Nerdbank.GitVersioning" Version="3.8.118">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
