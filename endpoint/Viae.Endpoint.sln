@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viae.Services.Tests", "test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viae.Presentation", "src\Viae.Presentation\Viae.Presentation.csproj", "{A6C06C3B-9194-4174-A341-9F45E52F09C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viae.Presentation.Mvc.Tests", "tests\Viae.Presentation.Mvc.Tests\Viae.Presentation.Mvc.Tests.csproj", "{A254823D-71DB-45B3-A089-21773B65326F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -143,6 +145,18 @@ Global
 		{A6C06C3B-9194-4174-A341-9F45E52F09C7}.Release|x64.Build.0 = Release|Any CPU
 		{A6C06C3B-9194-4174-A341-9F45E52F09C7}.Release|x86.ActiveCfg = Release|Any CPU
 		{A6C06C3B-9194-4174-A341-9F45E52F09C7}.Release|x86.Build.0 = Release|Any CPU
+		{A254823D-71DB-45B3-A089-21773B65326F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A254823D-71DB-45B3-A089-21773B65326F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A254823D-71DB-45B3-A089-21773B65326F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A254823D-71DB-45B3-A089-21773B65326F}.Debug|x64.Build.0 = Debug|Any CPU
+		{A254823D-71DB-45B3-A089-21773B65326F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A254823D-71DB-45B3-A089-21773B65326F}.Debug|x86.Build.0 = Debug|Any CPU
+		{A254823D-71DB-45B3-A089-21773B65326F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A254823D-71DB-45B3-A089-21773B65326F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A254823D-71DB-45B3-A089-21773B65326F}.Release|x64.ActiveCfg = Release|Any CPU
+		{A254823D-71DB-45B3-A089-21773B65326F}.Release|x64.Build.0 = Release|Any CPU
+		{A254823D-71DB-45B3-A089-21773B65326F}.Release|x86.ActiveCfg = Release|Any CPU
+		{A254823D-71DB-45B3-A089-21773B65326F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -157,5 +171,6 @@ Global
 		{EDD19F12-2AA3-4DF8-A064-FD10B1F22A2A} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{86995AAA-5E43-4509-AA9A-5B6622C269F4} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{A6C06C3B-9194-4174-A341-9F45E52F09C7} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{A254823D-71DB-45B3-A089-21773B65326F} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 	EndGlobalSection
 EndGlobal
