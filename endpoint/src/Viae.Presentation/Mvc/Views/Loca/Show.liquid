@@ -1,0 +1,49 @@
+{% layout 'Shared/_Layout' %}
+
+{% section title %}
+{{ Model.Name }} - Viae{% endsection %}
+
+{% section content %}
+<h1>{{ Model.Name }}</h1>
+
+<div id="map"></div>
+<script src="/js/mapGeoJson.js"></script>
+
+{% if Model.Content %}
+  <div class="content">
+    {{ Model.Content | markdown }}
+  </div>
+{% endif %}
+
+{% if Model.NearbyLoca.size > 0 %}
+  <h2>Nearby Loca</h2>
+  <div class="loca-labels">
+    {% for locus in Model.NearbyLoca %}
+      <div class="loca-label">
+        <a href="{{ locus.Path }}">
+          {% include '_icons/place' -%}
+          {{- locus.Name }}
+          <span style="font-size:smaller;font-style:italic;"> {{ locus.Distance | format_number: 'F1' }} km </span>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if Model.Vestigia %}
+  <h2>Vestigia</h2>
+  <div class="loca-labels">
+    {% for vestigium in Model.Vestigia %}
+      <div class="loca-label">
+        <a href="{{ vestigium.Path }}">
+          {% include '_icons/checkin' -%}
+          {{- vestigium.HappenedAt | slice: 0, 10 }}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<p><a href="/loca">&larr; Back to all loca</a></p>
+
+{% endsection %}

@@ -1,0 +1,29 @@
+{% layout 'Shared/_Layout' %}
+
+{% section title %}
+Vestigia - Viae{% endsection %}
+
+{% section content %}
+<h1>Vestigia</h1>
+
+{% if Model.HasVestigia %}
+  <div id="map"></div>
+  <script src="/js/mapGeoJson.js"></script>
+
+  <div class="loca-labels">
+    {% for vestigium in Model.Vestigia %}
+      <div class="loca-label">
+        <a href="{{ vestigium.Path }}">
+          {%- include '_icons/checkin' -%}
+          {{- vestigium.LocusName }}
+          &mdash;
+          {{ vestigium.HappenedAt | slice: 0, 10 -}}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="info">No vestigia found.</div>
+{% endif %}
+
+{% endsection %}

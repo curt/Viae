@@ -1,0 +1,23 @@
+{% layout 'Shared/_Layout' %}
+
+{% section title %}
+{{ Model.LocusName }} - {{ Model.HappenedAt | slice: 0, 10 }} - Viae{% endsection %}
+
+{% section content %}
+<h1>
+  {{ Model.LocusName }}
+  <span class="subtitle">&mdash; {{ Model.HappenedAt | slice: 0, 16 }} UTC</span>
+</h1>
+
+{% if Model.Content %}
+  <div class="content">
+    {{ Model.Content | markdown }}
+  </div>
+{% endif %}
+
+<div id="map"></div>
+<script src="/js/mapGeoJson.js"></script>
+
+<p><a href="/vestigia">&larr; Back to all vestigia</a></p>
+
+{% endsection %}

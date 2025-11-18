@@ -13,7 +13,7 @@ public static class ServiceCollectionExtensions
     {
         services.AddScoped<IMissioService, MissioService>();
         services.AddScoped<ILocusService, LocusService>();
-        services.AddScoped<IActivityPubDiscoveryService, ActivityPubDiscoveryService>();
+
         return services;
     }
 }

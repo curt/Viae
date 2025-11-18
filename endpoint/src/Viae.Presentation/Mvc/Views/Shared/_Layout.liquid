@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% rendersection title %}</title>
+    <link rel="stylesheet" href="/css/site.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    >
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    {% rendersection head %}
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">Viae</a>
+      <button class="navbar-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="navbar-menu" id="navbarMenu">
+        <li><a href="/loca">Loca</a></li>
+        <li><a href="/vestigia">Vestigia</a></li>
+      </ul>
+    </nav>
+    <div class="main-content">
+      {% rendersection content %}
+    </div>
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById('navbarMenu');
+        menu.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>

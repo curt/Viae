@@ -1,0 +1,27 @@
+{% layout 'Shared/_Layout' %}
+
+{% section title %}
+Loca - Viae{% endsection %}
+
+{% section content %}
+<h1>Loca</h1>
+
+{% if Model.HasLoca %}
+  <div id="map"></div>
+  <script src="/js/mapGeoJson.js"></script>
+
+  <div class="loca-labels">
+    {% for locus in Model.Loca %}
+      <div class="loca-label">
+        <a href="{{ locus.Path }}">
+          {%- include '_icons/place' -%}
+          {{- locus.Name -}}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="info">No loca found.</div>
+{% endif %}
+
+{% endsection %}
