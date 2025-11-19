@@ -1,4 +1,6 @@
-// Copyright (c) Curt Gilman. Licensed under the AGPL-3.0 License. See LICENSE file in the project root for full license information.
+// Copyright © 2025 Curt Gilman
+// SPDX-License-Identifier: AGPL-3.0-only
+// Viae: A geo-centric, journey-focused, federated blog platform
 
 using System.Text.Json;
 using FluentAssertions;
