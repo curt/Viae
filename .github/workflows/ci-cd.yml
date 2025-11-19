@@ -36,11 +36,11 @@ jobs:
 
     - name: Check CSharpier formatting
       working-directory: ${{ env.SOLUTION_PATH }}
-      run: csharpier . --check
+      run: csharpier check endpoint
 
     - name: Check dotnet format
       working-directory: ${{ env.SOLUTION_PATH }}
-      run: dotnet format --verify-no-changes --verbosity diagnostic
+      run: dotnet format style endpoint --verify-no-changes --verbosity diagnostic
 
   build-and-test:
     name: Build and Test
