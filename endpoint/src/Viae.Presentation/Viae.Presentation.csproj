@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <LangVersion>14.0</LangVersion>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="FluentValidation" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+        <PackageReference Include="Fluid.MvcViewEngine" />
+        <PackageReference Include="Hangfire.AspNetCore" />
+        <PackageReference Include="Hangfire.PostgreSql" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="NetTopologySuite.IO.GeoJSON" />
+        <PackageReference Include="Newtonsoft.Json" />
+        <PackageReference Include="Viae.Fluid.Markdown.Mvc" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="../Viae.ActivityPub/Viae.ActivityPub.csproj" />
+        <ProjectReference Include="../Viae.Domain/Viae.Domain.csproj" />
+        <ProjectReference Include="../Viae.Persistence/Viae.Persistence.csproj" />
+        <ProjectReference Include="../Viae.Services/Viae.Services.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="Mvc\Views\**\*.liquid">
+            <CopyToOutput>true</CopyToOutput>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Mvc\wwwroot\**">
+            <CopyToOutput>true</CopyToOutput>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+</Project>

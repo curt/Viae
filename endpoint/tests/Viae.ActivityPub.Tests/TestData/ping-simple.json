@@ -1,0 +1,7 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "type": "Ping",
+  "id": "https://example.com/ping/abc123",
+  "actor": "https://example.com/users/alice",
+  "to": "https://social.example/users/bob"
+}

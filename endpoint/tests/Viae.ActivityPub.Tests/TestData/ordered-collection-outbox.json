@@ -1,0 +1,8 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "type": "OrderedCollection",
+  "id": "https://mastodon.social/users/alice/outbox",
+  "totalItems": 42,
+  "first": "https://mastodon.social/users/alice/outbox?page=true",
+  "last": "https://mastodon.social/users/alice/outbox?min_id=0&page=true"
+}

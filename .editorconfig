@@ -1,0 +1,68 @@
+# Copyright © 2025 Curt Gilman
+# SPDX-License-Identifier: AGPL-3.0-only
+# Viae: A geo-centric, journey-focused, federated blog platform
+
+# Root .editorconfig — affects all C# files in this repo
+root = true
+
+[*]
+
+# Code style (minimal sample)
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+insert_final_newline = true
+
+[*.{cs,editorconfig,gitignore}]
+
+# License header template for dotnet-format
+file_header_template = Copyright © 2025 Curt Gilman\nSPDX-License-Identifier: AGPL-3.0-only\nViae: A geo-centric, journey-focused, federated blog platform
+
+[*.cs]
+
+##########################
+# General analyzer setup #
+##########################
+
+# Enforce use of analyzers and code style
+dotnet_analyzer_diagnostic.severity = warning
+
+# Treat specific analyzer categories as warnings (visible in Problems panel)
+dotnet_analyzer_diagnostic.category-Style.severity = warning
+dotnet_analyzer_diagnostic.category-Simplification.severity = warning
+dotnet_analyzer_diagnostic.category-Formatting.severity = warning
+dotnet_analyzer_diagnostic.category-Reliability.severity = warning
+dotnet_analyzer_diagnostic.category-Performance.severity = warning
+dotnet_analyzer_diagnostic.category-Design.severity = warning
+dotnet_analyzer_diagnostic.category-Maintainability.severity = warning
+dotnet_analyzer_diagnostic.category-Naming.severity = warning
+dotnet_analyzer_diagnostic.category-Usage.severity = warning
+dotnet_analyzer_diagnostic.category-CodeQuality.severity = warning
+dotnet_analyzer_diagnostic.category-MSTest.severity = warning
+
+# Overrides
+dotnet_diagnostic.CA1848.severity = none
+dotnet_diagnostic.CA1873.severity = none
+dotnet_diagnostic.IDE0008.severity = none
+dotnet_diagnostic.IDE0021.severity = none
+dotnet_diagnostic.IDE0022.severity = none
+dotnet_diagnostic.IDE0023.severity = none
+dotnet_diagnostic.IDE0024.severity = none
+dotnet_diagnostic.IDE0055.severity = none
+dotnet_diagnostic.IDE0058.severity = none
+dotnet_diagnostic.IDE0160.severity = none
+
+############################################
+# Overrides for the tests folder only
+############################################
+[endpoint/tests/**/*.cs]
+# Disable CA1001: Types that own disposable fields should be disposable
+dotnet_diagnostic.CA1001.severity = none
+# Disable CA1305: Behavior of DateTime.Parse(string) could vary
+dotnet_diagnostic.CA1305.severity = none
+# Disable CA1707: Remove underscores from member name
+dotnet_diagnostic.CA1707.severity = none
+
+# Enable MSTEST0049: Flow TestContext.CancellationToken to async operations
+dotnet_diagnostic.MSTEST0049.severity = warning

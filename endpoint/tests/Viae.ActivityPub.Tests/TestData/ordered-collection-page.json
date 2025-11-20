@@ -1,0 +1,33 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "type": "OrderedCollectionPage",
+  "id": "https://mastodon.social/users/alice/outbox?page=true",
+  "partOf": "https://mastodon.social/users/alice/outbox",
+  "next": "https://mastodon.social/users/alice/outbox?max_id=12345&page=true",
+  "startIndex": 0,
+  "orderedItems": [
+    {
+      "type": "Create",
+      "id": "https://mastodon.social/users/alice/statuses/67890/activity",
+      "actor": "https://mastodon.social/users/alice",
+      "published": "2025-10-22T10:30:00Z",
+      "object": {
+        "type": "Note",
+        "id": "https://mastodon.social/users/alice/statuses/67890",
+        "content": "<p>This is a recent post from my outbox!</p>",
+        "published": "2025-10-22T10:30:00Z",
+        "attributedTo": "https://mastodon.social/users/alice",
+        "to": [
+          "https://www.w3.org/ns/activitystreams#Public"
+        ]
+      }
+    },
+    {
+      "type": "Create",
+      "id": "https://mastodon.social/users/alice/statuses/67889/activity",
+      "actor": "https://mastodon.social/users/alice",
+      "published": "2025-10-22T09:15:00Z",
+      "object": "https://mastodon.social/users/alice/statuses/67889"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/security/v1"
+  ],
+  "type": "Person",
+  "id": "https://mastodon.social/@alice",
+  "inbox": "https://mastodon.social/users/alice/inbox",
+  "outbox": "https://mastodon.social/users/alice/outbox",
+  "preferredUsername": "alice",
+  "name": "Alice Smith",
+  "summary": "Software engineer interested in federated social networks",
+  "url": "https://mastodon.social/@alice",
+  "publicKey": {
+    "id": "https://mastodon.social/@alice#main-key",
+    "owner": "https://mastodon.social/@alice",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA...\n-----END PUBLIC KEY-----"
+  }
+}

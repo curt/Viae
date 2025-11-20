@@ -1,0 +1,8 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "type": "Collection",
+  "id": "https://mastodon.social/users/alice/followers",
+  "totalItems": 250,
+  "first": "https://mastodon.social/users/alice/followers?page=1",
+  "last": "https://mastodon.social/users/alice/followers?page=5"
+}
