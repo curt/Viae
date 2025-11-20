@@ -139,6 +139,10 @@ jobs:
       id: nbgv
       run: echo "version=$(nbgv get-version -v SemVer2)" >> $GITHUB_OUTPUT
 
+    - name: Display version information
+      run: |
+        echo "Building version ${{ steps.nbgv.outputs.version }}"
+
     - name: Determine branch tag
       id: branch
       run: |
@@ -163,7 +167,6 @@ jobs:
         tags: |
           type=semver,pattern={{version}},value=${{ steps.nbgv.outputs.version }}
           type=semver,pattern={{major}}.{{minor}},value=${{ steps.nbgv.outputs.version }}
-          type=sha,prefix={{branch}}-
           type=raw,value=${{ steps.branch.outputs.tag }}
 
     - name: Set up Docker Buildx
