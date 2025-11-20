@@ -74,7 +74,7 @@ jobs:
         path: ${{ env.SOLUTION_PATH }}/TestResults/**/*.trx
 
     - name: Upload coverage results
-      # if: github.event_name == 'push'
+      if: github.event_name == 'push'
       uses: actions/upload-artifact@v4
       with:
         name: coverage-results
@@ -84,7 +84,7 @@ jobs:
     name: Upload Coverage to Coveralls
     runs-on: ubuntu-24.04-arm
     needs: build-and-test
-    # if: github.event_name == 'push'
+    if: github.event_name == 'push'
     
     steps:
     - name: Checkout code
@@ -117,7 +117,7 @@ jobs:
     name: Build and Push Docker Image
     runs-on: ubuntu-24.04-arm
     needs: build-and-test
-    # if: github.event_name == 'push' && (github.ref == 'refs/heads/domnus' || github.ref == 'refs/heads/officina')
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/domnus' || github.ref == 'refs/heads/officina')
     permissions:
       contents: read
       packages: write
