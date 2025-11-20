@@ -8,3 +8,5 @@ docs
 TestResults
 .claude
 .github
+.vscode
+tests

@@ -1,0 +1,44 @@
+# Copyright (c) Curt Gilman. Licensed under the AGPL-3.0 License. See LICENSE file in the project root for full license information.
+
+services:
+  db:
+    image: ghcr.io/curt/postgis:17-3.6-alpine
+    ports:
+      - "${EXT_DB_PORT:-}:5432"
+    environment:
+      POSTGRES_DB: viae
+      POSTGRES_USER: viae
+    env_file:
+      - .env.default
+      - .env
+    volumes:
+      - pg17_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U viae"]
+      interval: 1s
+      timeout: 1s
+      retries: 10
+
+  app:
+    image: ghcr.io/curt/viae
+    build:
+      context: .
+    environment:
+      Postgres__Host: db
+      Postgres__Port: 5432
+      Postgres__Database: viae
+      Postgres__Username: viae
+      Postgres__Password: ${POSTGRES_PASSWORD}
+    env_file:
+      - .env.default
+      - .env
+    ports:
+      - "${EXT_APP_PORT:-}:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./data:/var/local/viae/data
+
+volumes:
+  pg17_data:
