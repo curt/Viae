@@ -20,7 +20,7 @@ env:
 jobs:
   build-and-test:
     name: Build and Test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     
     steps:
     - name: Checkout code
@@ -82,7 +82,7 @@ jobs:
 
   coverage:
     name: Upload Coverage to Coveralls
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     needs: build-and-test
     # if: github.event_name == 'push'
     
@@ -115,7 +115,7 @@ jobs:
 
   docker-build-and-push:
     name: Build and Push Docker Image
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     needs: build-and-test
     # if: github.event_name == 'push' && (github.ref == 'refs/heads/domnus' || github.ref == 'refs/heads/officina')
     permissions:
